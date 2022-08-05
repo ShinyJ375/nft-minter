@@ -8,20 +8,14 @@ export default function Home() {
   } = useMoralis()
 
   const metamaskAuth = async () => {
-    try {
-      await authenticate(
-        signingMessage:"Auth to start lazy minting your NFTs"
-      )
-    } catch (error) {
-      console.log(error)
-    }
+    try {}
   }
 
 
 
   if(!isAuthenticated) {
     return(
-      <AuthPage metamaskAuth={metamaskAuth} />      
+      <AuthPage />      
     )
   }
   return (

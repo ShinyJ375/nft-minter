@@ -21,7 +21,7 @@ export default function Home() {
 
   if(!isAuthenticated) {
     return(
-      <AuthPage metamaskAuth={metamaskAuth} />      
+      <AuthPage />      
     )
   }
   return (

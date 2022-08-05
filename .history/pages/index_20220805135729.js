@@ -9,9 +9,7 @@ export default function Home() {
 
   const metamaskAuth = async () => {
     try {
-      await authenticate(
-        signingMessage:"Auth to start lazy minting your NFTs"
-      )
+      await authenticate()
     } catch (error) {
       console.log(error)
     }
@@ -21,7 +19,7 @@ export default function Home() {
 
   if(!isAuthenticated) {
     return(
-      <AuthPage metamaskAuth={metamaskAuth} />      
+      <AuthPage />      
     )
   }
   return (
